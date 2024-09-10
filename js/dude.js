@@ -170,6 +170,23 @@ const scrollTimeline = gsap.timeline({
     scrub: true,
     start: "0% 0%",
     end: "100% 100%",
+    markers: true,
+    onLeave: (self) => {
+      gsap.to(".animation-container", {
+        // 트리거된 요소에 대해 실행
+        opacity: 0,
+        duration: 1, // 서서히 1초 동안 opacity 0으로
+        ease: "power2.out", // 애니메이션의 부드러운 종료
+      });
+    },
+    onEnterBack: (self) => {
+      gsap.to(".animation-container", {
+        // 트리거된 요소에 대해 실행
+        opacity: 1,
+        duration: 1, // 서서히 1초 동안 opacity 0으로
+        ease: "power2.out", // 애니메이션의 부드러운 종료
+      });
+    },
   },
 });
 

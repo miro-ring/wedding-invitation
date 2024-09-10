@@ -3,28 +3,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>miro의 모바일 청첩장</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
     <div class="page">
       <section class="intro_texts">
-        <div class="intro_text t1">서로에게 행복을 주는 사람을 만났습니다.</div>
-        <div class="intro_text t2">
+        <span class="intro_text t1"
+          >서로에게 행복을 주는 사람을 만났습니다.</span
+        >
+        <span class="intro_text t2">
           웃는 모습이 너무나 예쁜 그 사람을 만났습니다.
-        </div>
-        <div class="intro_text t3">운명처럼 만나게 된 우리의 인연</div>
-        <div class="intro_text t4">그 인연에 이끌려 이제 영원을</div>
-        <div class="intro_text t5">함께 약속하려 합니다.</div>
-        <div class="intro_text t6">저희의 하나 됨을 지켜보아 주시고</div>
-        <div class="intro_text t7">
+        </span>
+        <span class="intro_text t3">운명처럼 만나게 된 우리의 인연</span>
+        <span class="intro_text t4">그 인연에 이끌려 이제 영원을</span>
+        <span class="intro_text t5">함께 약속하려 합니다.</span>
+        <span class="intro_text t6">저희의 하나 됨을 지켜보아 주시고</span>
+        <span class="intro_text t7">
           격려해주시면 더없는 기쁨으로 간직하겠습니다.
-        </div>
+        </span>
       </section>
       <div class="animation-container">
         <svg viewBox="0 -115 315 350">
           <g
             class="dude"
-            stroke="white"
+            stroke="black"
             stroke-width="7"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -73,7 +75,7 @@
         <svg viewBox="0 -100 315 350">
           <g
             class="dude-woman"
-            stroke="white"
+            stroke="black"
             stroke-width="7"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -126,10 +128,15 @@
           </g>
         </svg>
       </div>
+      <canvas class="confetti-canvas"></canvas>
+    </div>
+    <div class="page_two">
+      <span>동균</span>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script type="module" src="js/index.js"></script>
   </body>
 </html>
