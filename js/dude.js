@@ -170,7 +170,6 @@ const scrollTimeline = gsap.timeline({
     scrub: true,
     start: "0% 0%",
     end: "100% 100%",
-    markers: true,
     onLeave: (self) => {
       gsap.to(".animation-container", {
         // 트리거된 요소에 대해 실행

@@ -61,7 +61,25 @@ svg {
   height: 42vh;
 }
 
-.page_two {
-  height: 1200px;
-  background-color: #000;
+.page2 {
+  background-color: black;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.row {
+  background-color: #fff;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.wedding_image {
+  opacity: 0;
 }
