@@ -12,7 +12,6 @@ const startConfetti = () => {
   const frame = () => {
     if (!isConfettiActive) return; // Confetti가 중단되면 더 이상 새로운 confetti 생성 안 함
 
-    const timeLeft = animationEnd - Date.now();
     skew = Math.max(0.8, skew - 0.001);
 
     myConfetti({
