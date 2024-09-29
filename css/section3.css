@@ -1,0 +1,25 @@
+.section3 {
+  background-color: #000;
+  height: 100vh;
+  padding: 6px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 6px;
+}
+
+.col {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  justify-content: space-around;
+  height: calc((100vh - 18px) / 4);
+  gap: 6px;
+}
+
+.col img {
+  width: 150px;
+}
