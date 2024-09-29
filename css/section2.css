@@ -1,0 +1,24 @@
+.section2 {
+  width: 100%;
+  height: calc(100% + 3500px);
+}
+
+.rows {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.row {
+  background-color: #fff;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.wedding_image {
+  opacity: 0;
+}

@@ -2,7 +2,7 @@ const openImage = gsap.timeline({
   scrollTrigger: {
     scrub: true,
     pin: true,
-    trigger: ".page2",
+    trigger: ".rows",
     start: "0% 0%",
     end: "+=3500px",
     toggleActions: "play pause reverse reverse",
