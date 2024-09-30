@@ -1,6 +1,7 @@
 const canvas = document.querySelector(".confetti-canvas");
 const myConfetti = confetti.create(canvas, { resize: true });
 let isConfettiActive = true;
+let isConfettiStopped = false;
 
 const randomInRange = (min, max) => Math.random() * (max - min) + min;
 
@@ -39,10 +40,12 @@ startConfetti();
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 2000 && isConfettiActive) {
     isConfettiActive = false;
+    isConfettiStopped = true;
   }
 
-  if (window.scrollY < 2500 && !isConfettiActive) {
+  if (window.scrollY < 2000 && isConfettiStopped) {
     isConfettiActive = true;
+    isConfettiStopped = false;
     startConfetti();
   }
 });
