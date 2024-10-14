@@ -7,6 +7,14 @@
     <link href="./css/section1.css" rel="stylesheet" />
     <link href="./css/section2.css" rel="stylesheet" />
     <link href="./css/section3.css" rel="stylesheet" />
+    <link href="./css/skip.css" rel="stylesheet" />
+    <script>
+      function scrollToSection4() {
+        document.querySelector(".section4").scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
   </head>
   <body>
     <main>
@@ -147,33 +155,30 @@
         </div>
       </div>
       <div class="section3">
-        <div class="image-gallery">
-          <div class="col col-1">
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-          </div>
-          <div class="col col-2">
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-          </div>
-          <div class="col col-3">
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-          </div>
-          <div class="col col-4">
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-            <img src="./imgs/col.jpg" alt="" />
-          </div>
+        <div class="image-wrapper">
+          <img src="./imgs/wedding.webp" alt="" />
+        </div>
+        <div class="image-wrapper">
+          <img src="./imgs/wedding.webp" alt="" />
+        </div>
+        <div class="image-wrapper">
+          <img src="./imgs/wedding.webp" alt="" />
+        </div>
+        <div class="image-wrapper">
+          <img src="./imgs/wedding.webp" alt="" />
+        </div>
+        <div class="image-wrapper">
+          <img src="./imgs/wedding.webp" alt="" />
+        </div>
+        <div class="image-wrapper">
+          <img src="./imgs/wedding.webp" alt="" />
         </div>
       </div>
+      <div class="image-counter"></div>
+      <button class="skip-gallery" onclick="scrollToSection4()">
+        <div class="skip-gallery-icon"><span></span></div>
+      </button>
+      <div class="section4" style="width: 100%; height: 100%">미로링</div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>

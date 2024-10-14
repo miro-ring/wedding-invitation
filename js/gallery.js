@@ -1,19 +1,27 @@
-const xValue = 630 - window.innerWidth;
+const horizontal = document.querySelector(".section3");
+const imgs = gsap.utils.toArray(".section3 > div");
+const imageCounter = document.querySelector(".image-counter");
 
-const gallery = gsap.timeline({
+const galleryAnimation = gsap.timeline({
   scrollTrigger: {
-    scrub: true,
+    trigger: horizontal,
+    start: "top top",
+    end: () => "+=" + (horizontal.offsetWidth - innerWidth),
     pin: true,
-    trigger: ".section3",
-    start: "0% 0%",
-    end: "+=1000px",
-    toggleActions: "play pause reverse reverse",
+    ainicipatePin: 1,
+    scrub: 1,
+    invalidateOnRefresh: true,
+    snap: {
+      snapTo: 1 / (imgs.length - 1),
+      inertia: false,
+      duration: { min: 1, max: 1 },
+    },
+    onUpdate: (self) => {
+      const progress = self.progress;
+      const currentIndex = Math.round(progress * (imgs.length - 1)) + 1;
+      imageCounter.textContent = `${currentIndex} / ${imgs.length}`;
+    },
   },
 });
-gallery.set(".col-2", { x: -xValue });
-gallery.set(".col-4", { x: -xValue });
 
-gallery.to(".col-1", { x: -xValue }, 0);
-gallery.to(".col-2", { x: 0 }, 0);
-gallery.to(".col-3", { x: -xValue }, 0);
-gallery.to(".col-4", { x: 0 }, 0);
+galleryAnimation.to(imgs, { xPercent: -100 * (imgs.length - 1), ease: "none" });
