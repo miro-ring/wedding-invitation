@@ -1,12 +1,35 @@
-const section4 = gsap.timeline({
+gsap.from(".come", {
   scrollTrigger: {
     trigger: ".section4",
-    start: "top center",
+    start: "top 200px",
+    markers: true,
     toggleActions: "play reverse play reverse",
   },
+  opacity: 0,
+  y: 50,
+  duration: 1,
 });
 
-section4
-  .from(".come", { opacity: 0, y: 50, duration: 1 })
-  .from(".map", { opacity: 0, y: 50, duration: 1, delay: 0.1 })
-  .from(".name-wrapper", { opacity: 0, y: 50, duration: 1, delay: 0.2 });
+gsap.from(".map", {
+  scrollTrigger: {
+    trigger: ".section4",
+    start: "top 170px",
+    markers: true,
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".name-wrapper", {
+  scrollTrigger: {
+    trigger: ".section4",
+    start: "top 140px",
+    markers: true,
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
