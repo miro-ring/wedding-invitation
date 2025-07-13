@@ -42,6 +42,22 @@ gsap.set(hairWoman, {
   svgOrigin: "180 45",
 });
 
+gsap.set(".left-front-arm", {
+  svgOrigin: "116 36",
+});
+
+gsap.set(".left-bottom-arm", {
+  svgOrigin: "120 20",
+});
+
+gsap.set(".left-front-hand", {
+  svgOrigin: "118 38",
+});
+
+gsap.set(".bride-head", {
+  svgOrigin: "100 10",
+});
+
 const halfBodyTimeline = (leg, arm) => {
   const legBottom = leg.querySelector(".leg-bottom");
   const armBottom = arm.querySelector(".arm-bottom");
@@ -166,24 +182,10 @@ const numberOfCycles = Math.ceil((3 * window.innerWidth) / window.innerHeight);
 
 const scrollTimeline = gsap.timeline({
   scrollTrigger: {
-    trigger: ".section1",
+    trigger: ".section2",
     scrub: true,
     start: "0% 0%",
     end: "100% 100%",
-    onLeave: () => {
-      gsap.to(".animation-container", {
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-      });
-    },
-    onEnterBack: () => {
-      gsap.to(".animation-container", {
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-      });
-    },
   },
 });
 
@@ -234,7 +236,49 @@ scrollTimeline
   .to(armsWoman[0], { duration: 0.2, rotation: -20 }, "-=0.2")
   .to(armBottomsWoman[0], { duration: 0.2, rotation: -130 }, "-=0.2")
   .to(armsWoman[1], { duration: 0.2, rotation: -40 }, "-=0.2")
-  .to(armBottomsWoman[1], { duration: 0.2, rotation: -120 }, "-=0.2");
+  .to(armBottomsWoman[1], { duration: 0.2, rotation: -120 }, "-=0.2")
+
+  .to(".left-bottom-arm", { duration: 0.2, rotation: 35 }, "-=0.2")
+  .to(".left-front-arm", { duration: 0.2, rotation: 55 }, "-=0.2")
+  .to(".left-front-hand", { duration: 0.2, rotation: 55 }, "-=0.2")
+  .to(".bride-head", { duration: 0.2, rotation: -15 }, "-=0.2");
+
+const scrollTimeline2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section2",
+    scrub: true,
+    start: "top center", // section1의 상단이 화면 중앙에 왔을 때
+    end: "bottom center", // section1의 하단이 화면 중앙에 왔을 때
+    onEnter: () => {
+      gsap.to(".animation-container", {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      });
+    },
+    onLeave: () => {
+      gsap.to(".animation-container", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+      });
+    },
+    onEnterBack: () => {
+      gsap.to(".animation-container", {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+      });
+    },
+    onLeaveBack: () => {
+      gsap.to(".animation-container", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+      });
+    },
+  },
+});
 
 window.addEventListener("resize", () => {
   ScrollTrigger.refresh();
