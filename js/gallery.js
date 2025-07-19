@@ -9,8 +9,8 @@ const galleryAnimation = gsap.timeline({
     start: "top top",
     end: () => "+=" + (horizontal.scrollWidth - window.innerWidth + 30) * 3,
     pin: true,
-    anticipatePin: 1,
-    scrub: 1,
+    anticipatePin: 0,
+    scrub: 0.8,
     invalidateOnRefresh: true,
     // onUpdate: (self) => {
     //   const progress = self.progress;
