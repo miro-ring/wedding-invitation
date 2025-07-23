@@ -6,8 +6,9 @@
 .section2-bg {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
   height: 100vh;
   background: url("../imgs/paper.jpg") center no-repeat;
   background-size: cover;
