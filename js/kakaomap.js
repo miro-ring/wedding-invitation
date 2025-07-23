@@ -6,7 +6,7 @@ const MAP_CONFIG = {
 };
 
 const MARKER_CONFIG = {
-  imageSrc: "../imgs/marker.png",
+  imageSrc: "/imgs/marker.png",
   imageSize: new kakao.maps.Size(50, 50),
   imageOffset: new kakao.maps.Point(10, 65),
   position: new kakao.maps.LatLng(37.5408, 127.0712),
