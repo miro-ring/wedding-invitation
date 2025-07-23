@@ -9,7 +9,7 @@ gsap.from(".come", {
   duration: 1,
 });
 
-gsap.from("#daumRoughmapContainer1749548490282", {
+gsap.from("#map", {
   scrollTrigger: {
     trigger: ".section5",
     start: "top 220px",
