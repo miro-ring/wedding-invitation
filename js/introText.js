@@ -25,10 +25,3 @@ function setVhProperty() {
 
 // 초기 설정
 setVhProperty();
-
-// 리사이즈 시 업데이트 (throttling 적용)
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(setVhProperty, 100);
-});
