@@ -1,3 +1,8 @@
+const BASE_URL =
+  window.location.hostname === "miro-ring.github.io"
+    ? "/wedding-invitation"
+    : "";
+
 // 지도 설정
 const MAP_CONFIG = {
   center: new kakao.maps.LatLng(37.5408, 127.0712),
@@ -6,7 +11,7 @@ const MAP_CONFIG = {
 };
 
 const MARKER_CONFIG = {
-  imageSrc: "/imgs/marker.png",
+  imageSrc: `${BASE_URL}/imgs/marker.png`,
   imageSize: new kakao.maps.Size(50, 50),
   imageOffset: new kakao.maps.Point(10, 65),
   position: new kakao.maps.LatLng(37.5408, 127.0712),
