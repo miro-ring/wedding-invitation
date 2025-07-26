@@ -10,13 +10,6 @@ window.addEventListener("resize", function () {
   }
 });
 
-// 화면 캡처 시도 감지
-document.addEventListener("visibilitychange", function () {
-  if (document.hidden) {
-    document.body.style.display = "none";
-  }
-});
-
 // 키보드 단축키 방지
 document.addEventListener("keydown", function (e) {
   if (e.key === "PrintScreen" || (e.ctrlKey && e.key === "p")) {
