@@ -31,7 +31,7 @@ gsap.from(".map", {
   duration: 1,
 });
 
-gsap.from(".name-wrapper", {
+gsap.from(".map_links_wrapper", {
   scrollTrigger: {
     trigger: ".section5",
     start: "top 140px",
