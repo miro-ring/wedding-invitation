@@ -47,3 +47,68 @@
   font-weight: bold;
   letter-spacing: 1.5px;
 }
+
+.heart_list {
+  list-style: none;
+  display: block;
+  position: relative;
+  box-shadow: rgba(217, 217, 217, 0.6) 0px 0px 10px 0px;
+  border-radius: 12px;
+  padding: 0;
+  background-color: #faf8f6;
+  border: 1px solid rgb(241, 241, 241);
+}
+
+.heart_list_item {
+  padding: 18px;
+}
+
+.heart_list_item:first-child {
+  border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+.heart_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-arrow {
+  transition: transform 0.8s ease;
+  transform: rotate(0deg);
+}
+
+.account_menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.account_menu.active {
+  max-height: 200px; /* 충분한 높이로 설정 */
+}
+
+.account_item {
+  padding-top: 20px;
+}
+
+.account_item + .account_item {
+  padding-top: 10px;
+}
+
+.copy_button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.copy_button:hover svg,
+.copy_button:hover svg path {
+  fill: #2e2e2e;
+}

@@ -42,7 +42,7 @@ gsap.from(".name-wrapper", {
   duration: 1,
 });
 
-gsap.from(".tmp1", {
+gsap.from(".heart_list", {
   scrollTrigger: {
     trigger: ".section5",
     start: "top 110px",
