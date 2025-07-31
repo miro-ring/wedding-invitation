@@ -9,10 +9,10 @@ gsap.from(".come", {
   duration: 1,
 });
 
-gsap.from("#map", {
+gsap.from(".location", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 220px",
+    start: "top 190px",
     toggleActions: "play reverse play reverse",
   },
   opacity: 0,
@@ -20,10 +20,10 @@ gsap.from("#map", {
   duration: 1,
 });
 
-gsap.from(".map", {
+gsap.from("#map", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 170px",
+    start: "top 150px",
     toggleActions: "play reverse play reverse",
   },
   opacity: 0,
@@ -42,43 +42,52 @@ gsap.from(".map_links_wrapper", {
   duration: 1,
 });
 
+gsap.from(".tip_container", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top 0px",
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".tip_text_container", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top 0px",
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".line", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -300px",
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+gsap.from(".heart", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -350px",
+    toggleActions: "play reverse play reverse",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
 gsap.from(".heart_list", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 110px",
-    toggleActions: "play reverse play reverse",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-});
-
-gsap.from(".tmp2", {
-  scrollTrigger: {
-    trigger: ".section5",
-    start: "top 80px",
-    toggleActions: "play reverse play reverse",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-});
-
-gsap.from(".tmp3", {
-  scrollTrigger: {
-    trigger: ".section5",
-    start: "top 50px",
-    toggleActions: "play reverse play reverse",
-  },
-  opacity: 0,
-  y: 50,
-  duration: 1,
-});
-
-gsap.from(".tmp4", {
-  scrollTrigger: {
-    trigger: ".section5",
-    start: "top 20px",
+    start: "top -400px",
     toggleActions: "play reverse play reverse",
   },
   opacity: 0,
