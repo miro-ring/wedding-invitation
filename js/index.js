@@ -8,3 +8,4 @@ import "./kakaomap.js";
 import "./preventCapture.js";
 import "./skyHeight.js";
 import "./heartList.js";
+import "./copyText.js";
