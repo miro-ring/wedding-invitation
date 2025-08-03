@@ -1,14 +1,14 @@
 .section5 {
   position: relative;
   padding: 0 20px;
-  font-family: 'omyu_pretty', 'NanumDdaAgDanDan', sans-serif;
+  font-family: "omyu_pretty", "NanumDdaAgDanDan", sans-serif;
 }
 
 .come {
   text-align: center;
   font-size: 26px;
   padding-top: 100px;
-  font-family: 'Ownglyph_corncorn-Rg', 'NanumDdaAgDanDan', sans-serif;
+  font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
 }
 
 .location {
@@ -17,7 +17,6 @@
   justify-content: center;
   padding: 30px 0 20px;
   color: #444;
-  gap: 8px;
 }
 
 #map {
@@ -26,7 +25,7 @@
   border-radius: 10px;
   border: 1px solid black;
   margin: 0 auto;
-  font-family: 'GangwonEduSaeeum_OTFMediumA', 'NanumDdaAgDanDan', sans-serif;
+  font-family: "GangwonEduSaeeum_OTFMediumA", "NanumDdaAgDanDan", sans-serif;
 }
 
 .customoverlay {
@@ -45,7 +44,7 @@
 .heart {
   text-align: center;
   font-size: 26px;
-  font-family: 'Ownglyph_corncorn-Rg', 'NanumDdaAgDanDan', sans-serif;
+  font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
 }
 
 .heart_list {
@@ -113,11 +112,6 @@
   cursor: pointer;
 }
 
-.copy_button:hover svg,
-.copy_button:hover svg path {
-  fill: #2e2e2e;
-}
-
 .map_links_wrapper {
   padding-top: 24px;
   position: relative;
@@ -142,7 +136,7 @@
 }
 
 .map_link.google {
-  background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 100%);
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc05 100%);
 }
 
 .map_link_svg {
@@ -184,4 +178,17 @@
   letter-spacing: 1.5px;
   line-height: 1.4;
   color: #444;
+}
+
+.check_icon {
+  fill: #3fb950 !important;
+}
+
+.check_icon path {
+  fill: #3fb950 !important;
+}
+
+.location_copy_button {
+  position: absolute;
+  right: 36px;
 }
