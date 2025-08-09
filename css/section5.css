@@ -118,7 +118,7 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 26px;
+  gap: 16px;
 }
 
 .map_link {
@@ -129,6 +129,10 @@
   box-shadow: rgba(217, 217, 217, 0.6) 0px 0px 10px 0px;
   box-sizing: border-box;
   height: 34px;
+}
+
+.map_link.kakao {
+  background-color: #fee500;
 }
 
 .map_link.naver {
@@ -194,6 +198,5 @@
 }
 
 .location_copy_button {
-  position: absolute;
-  right: 36px;
+  margin-left: 10px;
 }
