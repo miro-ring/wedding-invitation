@@ -176,8 +176,13 @@
 .tip_text {
   font-size: 16px;
   letter-spacing: 1.5px;
-  line-height: 1.4;
   color: #444;
+  word-break: keep-all;
+  line-break: strict;
+  overflow-wrap: anywhere;
+  hyphens: none;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .check_icon {
