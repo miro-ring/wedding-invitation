@@ -5,5 +5,12 @@
   z-index: 100;
   object-fit: contain;
   object-position: top;
-  background-color: #ac9c84;
+  background: repeating-linear-gradient(
+    160deg,
+    #b39d7f 0px,
+    #9f927e 25px,
+    #b09d82 55px,
+    #9c907f 80px,
+    #bba78a 120px
+  );
 }
