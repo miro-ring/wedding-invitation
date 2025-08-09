@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   const copyButtons = document.querySelectorAll(".copy_button");
-  console.log(copyButtons);
   copyButtons.forEach((button) => {
     button.addEventListener("click", function (e) {
       e.stopPropagation(); // 부모 요소의 클릭 이벤트 방지
