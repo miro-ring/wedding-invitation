@@ -4,11 +4,11 @@ if (window.outerHeight - window.innerHeight > 200) {
 }
 
 // 화면 크기 변경 감지
-window.addEventListener("resize", function () {
-  if (window.outerHeight - window.innerHeight > 200) {
-    document.body.style.display = "none";
-  }
-});
+// window.addEventListener("resize", function () {
+//   if (window.outerHeight - window.innerHeight > 200) {
+//     document.body.style.display = "none";
+//   }
+// });
 
 // 키보드 단축키 방지
 document.addEventListener("keydown", function (e) {

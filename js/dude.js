@@ -280,6 +280,6 @@ const scrollTimeline2 = gsap.timeline({
   },
 });
 
-window.addEventListener("resize", () => {
-  ScrollTrigger.refresh();
-});
+// window.addEventListener("resize", () => {
+//   ScrollTrigger.refresh();
+// });
