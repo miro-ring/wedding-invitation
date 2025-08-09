@@ -1,10 +1,18 @@
 .section2 {
   height: 3550px;
   position: relative;
+}
+
+.section2::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--fixed-width, 375px);
+  height: var(--fixed-height, 812px);
   background: url("../imgs/paper.jpg");
-  background-size: cover;
-  background-attachment: fixed; /* 화면에 고정 */
-  background-repeat: repeat; /* 반복 */
+  background-size: var(--fixed-width, 375px) var(--fixed-height, 812px);
+  background-repeat: repeat;
   background-position: center;
 }
 
