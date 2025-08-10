@@ -48,6 +48,15 @@
   justify-content: center; */
 }
 
+.gallery_title {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  padding-top: 100px;
+  font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
+}
+
 .gallery-cards {
   height: 500px !important;
 }
