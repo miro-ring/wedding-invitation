@@ -20,7 +20,7 @@ const MARKER_CONFIG = {
 const OVERLAY_CONFIG = {
   position: new kakao.maps.LatLng(37.5415, 127.07135),
   title: "스타시티아트홀 5층",
-  mapLink: "https://kko.kakao.com/xQxImUnF7D",
+  mapLink: "https://kko.kakao.com/01CFUFnoTg",
 };
 
 // 지도 초기화 함수
