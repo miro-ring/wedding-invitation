@@ -1,53 +1,3 @@
-.section4 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
-  width: 100%;
-  height: 100vh;
-  background-color: #f2ede7;
-}
-
-.image-wrapper-row1 {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-}
-
-.image-wrapper-row2 {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-}
-
-.image-wrapper-row1 > img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  display: inline-block;
-  border-radius: 8px;
-}
-
-.image-wrapper-row2 > img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  display: inline-block;
-  border-radius: 8px;
-}
-
-/* 갤러리 */
-
-/*=============== GALLERY ===============*/
-.gallery {
-  /* height: calc(var(--vh, 1vh) * 100);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-}
-
 .gallery_title {
   position: relative;
   display: block;
@@ -57,51 +7,20 @@
   font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
 }
 
-.gallery-cards {
-  height: 500px !important;
-}
-
-.gallery__card {
-  position: relative;
-  width: 100%;
-  height: 420px;
-  border-radius: 2rem !important;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden !important;
-}
-
-.gallery__img,
-.gallery__card::after,
-.gallery__data {
-  position: absolute;
-}
-
-.gallery__img {
-  inset: 0;
-  margin: auto;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.3s;
-  border-radius: 2rem !important;
+.gallery__overflow {
+  margin-top: 30px;
 }
 
 .gallery__overflow {
-  position: relative;
+  height: 500px;
 }
 
 .gallery__thumbnail {
   position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 0.3s;
+  width: 100%;
+  height: 440px;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .gallery__thumbnail-img {
@@ -109,107 +28,37 @@
   inset: 0;
   margin: auto;
   width: 100%;
-  height: 100%;
   object-fit: contain;
   object-position: center;
+  border-radius: 10px;
 }
 
-/* Swiper class */
-.gallery-cards,
-.gallery-thumbs {
-  width: 260px;
+/* 모든 슬라이드 기본 z-index */
+.gallery-thumbs .swiper-slide {
+  opacity: 0.5;
+  z-index: 1;
 }
 
-.gallery .swiper-wrapper {
-  padding: 2.5rem 0;
-}
-
-.gallery-thumbs {
-  height: 132px;
+/* Active 슬라이드 전체 */
+.gallery-thumbs .swiper-slide-active {
+  z-index: 2;
+  opacity: 1;
 }
 
 /* Active thumbnail */
 .swiper-slide-active .gallery__thumbnail {
-  transform: translateY(-1.25rem) scale(1.2);
+  transform: scale(2.2);
+  z-index: 100;
 }
 
-/* Rotate thumbnail */
 .swiper-slide-next .gallery__thumbnail {
-  transform: rotate(15deg);
+  transform: rotate(15deg) scale(1.3);
 }
 
 .swiper-slide-prev .gallery__thumbnail {
-  transform: rotate(-15deg);
-}
-
-/* Sliding numbers */
-.swiper-pagination-fraction {
-  font-size: var(--small-font-size);
-  letter-spacing: -1px;
-  font-weight: 500;
-  color: var(--first-color);
-  bottom: 0;
-}
-
-/* Arrow buttons */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: "";
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  font-size: 1.5rem;
-  color: var(--text-color-black);
-  top: 5.5rem;
-}
-
-.swiper-button-next {
-  right: -1.5rem;
-  transform: rotate(15deg);
-}
-
-.swiper-button-prev {
-  left: -1.5rem;
-  transform: rotate(-15deg);
-}
-
-/* Other swiper settings */
-.gallery-cards::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
+  transform: rotate(-15deg) scale(1.3);
 }
 
 .swiper-horizontal.swiper-css-mode > .swiper-wrapper {
   scroll-snap-type: initial;
-}
-
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
-@media screen and (max-width: 320px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
-}
-
-/* For medium devices */
-@media screen and (min-width: 1024px) {
-  .gallery__card {
-    width: 220px;
-    height: 290px;
-  }
-  .gallery__thumbnail {
-    width: 65px;
-    height: 65px;
-  }
-  .gallery-cards,
-  .gallery-thumbs {
-    width: 280px;
-  }
 }
