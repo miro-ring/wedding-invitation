@@ -22,18 +22,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function showCopySuccess(button) {
   // 원래 SVG 아이콘 저장
-  const originalIcon = button.querySelector(".copy_icon");
-  const checkIcon = button.querySelector(".check_icon");
+  // const originalIcon = button.querySelector(".copy_icon");
+  // const checkIcon = button.querySelector(".check_icon");
 
-  // 복사 아이콘 숨기기
-  originalIcon.style.display = "none";
+  // // 복사 아이콘 숨기기
+  // originalIcon.style.display = "none";
 
-  // 체크 아이콘 보이기
-  checkIcon.style.display = "block";
+  // // 체크 아이콘 보이기
+  // checkIcon.style.display = "block";
+
+  window.alert("복사되었습니다.");
 
   // 3초 후 원래 상태로 복원
-  setTimeout(() => {
-    originalIcon.style.display = "block";
-    checkIcon.style.display = "none";
-  }, 3000);
+  // setTimeout(() => {
+  //   originalIcon.style.display = "block";
+  //   checkIcon.style.display = "none";
+  // }, 3000);
 }
