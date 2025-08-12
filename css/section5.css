@@ -104,12 +104,15 @@
 .account_item_detail {
   display: flex;
   gap: 14px;
+  line-height: 20px;
 }
 
 .copy_button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 4px 8px;
+  box-shadow: rgba(217, 217, 217, 0.6) 0px 0px 30px 0px;
 }
 
 .map_links_wrapper {
@@ -199,6 +202,11 @@
 
 .location_copy_button {
   margin-left: 10px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  font-size: 10px;
+  padding: 4px 8px;
+  box-shadow: rgba(217, 217, 217, 0.6) 0px 0px 30px 0px;
 }
 
 .blessing_text {
