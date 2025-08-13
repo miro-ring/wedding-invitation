@@ -1,6 +1,71 @@
 .section3 {
   width: 100%;
-  height: calc(100% + 3500px);
+  padding-bottom: 30px;
+  position: relative;
+  background-color: #fff;
+  font-family: "omyu_pretty";
+}
+
+.section3_image {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.section3_date_container {
+  font-family: "MaruBuriSemiBold";
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.section3_name_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 60px;
+}
+
+.section3_date {
+  font-size: 14px;
+  color: #000;
+  display: block;
+}
+
+.section3_name {
+  font-family: "MaruBuriSemiBold";
+  font-size: 14px;
+  color: #000;
+}
+
+.section3_name_dot {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+.section3_name_sub {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 18px;
+  font-size: 10px;
+}
+
+.section3_button {
+  background-color: #000;
+  margin: 0 auto;
+  font-family: "MaruBuriSemiBold";
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  margin-top: 30px;
+  padding: 10px 70px;
+  border-radius: 10px;
 }
 
 .rows {
