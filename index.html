@@ -21,7 +21,12 @@
     <main>
       <!-- 시작 페이지 -->
       <div class="section1">
-        <img src="./imgs/sky.jpeg" class="sky_image" />
+        <img
+          src="./imgs/sky.jpeg"
+          class="sky_image"
+          loading="eager"
+          fetchpriority="high"
+        />
       </div>
       <!-- 움직이는 졸라맨 -->
       <div class="section2">
@@ -272,193 +277,252 @@
         </div>
         <canvas class="confetti-canvas"></canvas>
       </div>
-      <!-- 열리는 카드 페이지 -->
-      <!-- <div class="section3">
-        <div class="rows">
-          <div class="row" style="position: relative">
-            <div class="corner top-left">
-              <div class="corner-bg"></div>
-              <div class="corner-radius"></div>
+      <div class="section3">
+        <img class="wedding_calendar_image" src="./imgs/fifth.jpeg" />
+        <div class="date_container">
+          <span class="calendar_date">2025년 11월 8일 토요일</span>
+          <span class="calendar_time">오후 2시 40분 스타시티아트홀</span>
+        </div>
+        <div class="family_name_container">
+          <span class="family_name"
+            >장길천 <span class="family_name_dot">·</span> 송정임
+            <span class="family_name_sub">장남</span> 동균</span
+          >
+          <span class="family_name"
+            >이현열 <span class="family_name_dot">·</span> 김영미
+            <span class="family_name_sub">장녀</span> 서정</span
+          >
+        </div>
+        <button class="call_button">연락하기</button>
+        <div class="contact_dropdown" id="contactDropdown">
+          <div class="contact_content">
+            <!-- 신랑측 -->
+            <div class="contact_section">
+              <h3 class="contact_section_title">신랑측</h3>
+
+              <div class="contact_item">
+                <span class="contact_label">신랑 장동균</span>
+                <div class="contact_actions">
+                  <a href="tel:010-3772-6576" class="contact_btn call">
+                    <span>📞</span>
+                    <span>전화</span>
+                  </a>
+                  <a href="sms:010-3772-6576" class="contact_btn message">
+                    <span>💬</span>
+                    <span>문자</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <span class="contact_label">아버지 장길천</span>
+                <div class="contact_actions">
+                  <a href="tel:010-3744-6286" class="contact_btn call">
+                    <span>📞</span>
+                    <span>전화</span>
+                  </a>
+                  <a href="sms:010-3744-6286" class="contact_btn message">
+                    <span>💬</span>
+                    <span>문자</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <span class="contact_label">어머니 송정임</span>
+                <div class="contact_actions">
+                  <a href="tel:010-9416-6576" class="contact_btn call">
+                    <span>📞</span>
+                    <span>전화</span>
+                  </a>
+                  <a href="sms:010-9416-6576" class="contact_btn message">
+                    <span>💬</span>
+                    <span>문자</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="corner top-right">
-              <div class="corner-bg"></div>
-              <div class="corner-radius"></div>
+
+            <!-- 신부측 -->
+            <div class="contact_section">
+              <h3 class="contact_section_title">신부측</h3>
+
+              <div class="contact_item">
+                <span class="contact_label">신부 이서정</span>
+                <div class="contact_actions">
+                  <a href="tel:010-6733-5326" class="contact_btn call">
+                    <span>📞</span>
+                    <span>전화</span>
+                  </a>
+                  <a href="sms:010-6733-5326" class="contact_btn message">
+                    <span>💬</span>
+                    <span>문자</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <span class="contact_label">아버지 이현열</span>
+                <div class="contact_actions">
+                  <a href="tel:010-7777-8888" class="contact_btn call">
+                    <span>📞</span>
+                    <span>전화</span>
+                  </a>
+                  <a href="sms:010-7777-8888" class="contact_btn message">
+                    <span>💬</span>
+                    <span>문자</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact_item">
+                <span class="contact_label">어머니 김영미</span>
+                <div class="contact_actions">
+                  <a href="tel:010-9999-0000" class="contact_btn call">
+                    <span>📞</span>
+                    <span>전화</span>
+                  </a>
+                  <a href="sms:010-9999-0000" class="contact_btn message">
+                    <span>💬</span>
+                    <span>문자</span>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="corner bottom-left">
-              <div class="corner-bg"></div>
-              <div class="corner-radius"></div>
-            </div>
-            <div class="corner bottom-right">
-              <div class="corner-bg"></div>
-              <div class="corner-radius"></div>
-            </div>
-            <img
-              src="./imgs/invite_image.png"
-              width="100%"
-              height="100%"
-              class="wedding_image"
-            />
           </div>
         </div>
-      </div> -->
-      <div class="section3">
-        <img class="section3_image" src="./imgs/fifth.jpeg" />
-        <div class="section3_date_container">
-          <span class="section3_date">2025년 11월 8일 토요일</span>
-          <span class="section3_date">오후 2시 40분 스타시티아트홀</span>
-        </div>
-        <div class="section3_name_container">
-          <span class="section3_name"
-            >장길천 <span class="section3_name_dot">·</span> 송정임
-            <span class="section3_name_sub">장남</span> 동균</span
-          >
-          <span class="section3_name"
-            >이현열 <span class="section3_name_dot">·</span> 김영미
-            <span class="section3_name_sub">장녀</span> 서정</span
-          >
-        </div>
-        <button class="section3_button">연락하기</button>
       </div>
-      <div class="gallery">
+      <div class="section4">
         <span class="gallery_title">우리의 이야기</span>
-        <div class="gallery__overflow">
+        <div class="gallery_overflow">
           <div class="swiper gallery-thumbs">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/first.jpeg"
                     alt="image gallery"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/second.jpeg"
                     alt="image gallery"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/third.jpeg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/fourth.jpeg"
                     alt="image gallery"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/fifth.jpeg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/sixth.jpg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/seventh.jpg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/eighth.jpg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/ninth.jpg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
 
               <div class="swiper-slide">
-                <div class="gallery__thumbnail">
+                <div class="gallery_thumbnail">
                   <img
                     src="./imgs/tenth.jpg"
                     alt="image thumbnail"
-                    class="gallery__thumbnail-img"
+                    class="gallery_thumbnail_img"
                     loading="eager"
-                    fetchpriority="high"
+                    fetchpriority="auto"
                   />
                 </div>
               </div>
             </div>
-
             <!-- Swiper pagination -->
             <div class="swiper-pagination"></div>
           </div>
-
-          <!-- Swiper arrows -->
-          <!-- <div class="swiper-button-next">
-            <i class="ri-arrow-right-line"></i>
-          </div>
-          <div class="swiper-button-prev">
-            <i class="ri-arrow-left-line"></i>
-          </div> -->
         </div>
       </div>
       <!-- 마음 전하는 곳 및 오시는 길 -->

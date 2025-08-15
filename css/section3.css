@@ -1,18 +1,16 @@
 .section3 {
   width: 100%;
-  padding-bottom: 30px;
   position: relative;
   background-color: #fff;
-  font-family: "omyu_pretty";
 }
 
-.section3_image {
+.wedding_calendar_image {
   width: 100%;
   object-fit: contain;
   object-position: center;
 }
 
-.section3_date_container {
+.date_container {
   font-family: "MaruBuriSemiBold";
   padding-top: 30px;
   display: flex;
@@ -22,7 +20,15 @@
   gap: 12px;
 }
 
-.section3_name_container {
+.calendar_date,
+.calendar_time {
+  display: block;
+  font-size: 14px;
+  color: #000;
+}
+
+.family_name_container {
+  font-family: "MaruBuriSemiBold";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,34 +37,27 @@
   padding-top: 60px;
 }
 
-.section3_date {
-  font-size: 14px;
-  color: #000;
-  display: block;
-}
-
-.section3_name {
-  font-family: "MaruBuriSemiBold";
+.family_name {
   font-size: 14px;
   color: #000;
 }
 
-.section3_name_dot {
+.family_name_dot {
   display: inline-block;
   vertical-align: middle;
   padding: 0 10px;
 }
 
-.section3_name_sub {
+.family_name_sub {
   display: inline-block;
   vertical-align: middle;
   padding: 0 18px;
   font-size: 10px;
 }
 
-.section3_button {
+.call_button {
   background-color: #000;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   font-family: "MaruBuriSemiBold";
   font-size: 12px;
   color: #fff;
@@ -68,96 +67,112 @@
   border-radius: 10px;
 }
 
-.rows {
-  background-color: #a89f91;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* 연락처 */
+.contact_dropdown {
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-color: #f9f9f9;
+  border-radius: 0 0 16px 16px;
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.row {
-  background-color: #f2ede7;
-  color: black;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.contact_dropdown.active {
+  max-height: 800px; /* 더 많은 내용에 맞게 증가 */
 }
 
-.corner.top-left {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: -20px;
-  left: 0;
-}
-
-.corner.top-right {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: -20px;
-  right: 0;
-}
-
-.corner.bottom-left {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-}
-
-.corner.bottom-right {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  bottom: -20px;
-  right: 0;
-}
-
-.corner-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #f2ede7;
-}
-
-.corner-radius {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #a89f91;
-}
-
-.top-left .corner-radius {
-  border-radius: 0 0 0 100%;
-}
-
-.top-right .corner-radius {
-  border-radius: 0 0 100% 0;
-}
-
-.bottom-left .corner-radius {
-  border-radius: 100% 0 0 0;
-}
-
-.bottom-right .corner-radius {
-  border-radius: 0 100% 0 0;
-}
-
-.wedding_image {
+.contact_content {
+  padding: 24px;
   opacity: 0;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 12px;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+}
+
+.contact_dropdown.active .contact_content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact_section {
+  margin-bottom: 24px;
+}
+
+.contact_section:last-child {
+  margin-bottom: 0;
+}
+
+.contact_section_title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3498db;
+}
+
+.contact_item {
+  margin-bottom: 12px;
+  background-color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.contact_item:last-child {
+  margin-bottom: 0;
+}
+
+.contact_label {
   display: block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #34495e;
+  font-size: 14px;
+}
+
+.contact_actions {
+  display: flex;
+  gap: 8px;
+}
+
+.contact_btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #495057;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contact_btn:hover {
+  background-color: #e9ecef;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact_btn.call {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.contact_btn.call:hover {
+  background-color: #d4edda;
+}
+
+.contact_btn.message {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.contact_btn.message:hover {
+  background-color: #d1ecf1;
 }

@@ -7,15 +7,12 @@
   font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
 }
 
-.gallery__overflow {
+.gallery_overflow {
   margin-top: 30px;
-}
-
-.gallery__overflow {
   height: 500px;
 }
 
-.gallery__thumbnail {
+.gallery_thumbnail {
   position: relative;
   width: 100%;
   height: 440px;
@@ -23,7 +20,7 @@
   transition: transform 0.5s, opacity 0.2s;
 }
 
-.gallery__thumbnail-img {
+.gallery_thumbnail_img {
   position: absolute;
   inset: 0;
   margin: auto;
@@ -46,16 +43,16 @@
 }
 
 /* Active thumbnail */
-.swiper-slide-active .gallery__thumbnail {
+.swiper-slide-active .gallery_thumbnail {
   transform: scale(2.2);
   z-index: 100;
 }
 
-.swiper-slide-next .gallery__thumbnail {
+.swiper-slide-next .gallery_thumbnail {
   transform: rotate(15deg) scale(1.3);
 }
 
-.swiper-slide-prev .gallery__thumbnail {
+.swiper-slide-prev .gallery_thumbnail {
   transform: rotate(-15deg) scale(1.3);
 }
 

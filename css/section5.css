@@ -1,14 +1,14 @@
 .section5 {
   position: relative;
   padding: 0 20px;
-  font-family: "omyu_pretty", "NanumDdaAgDanDan", sans-serif;
+  font-family: "omyu_pretty", sans-serif;
 }
 
 .come {
   text-align: center;
   font-size: 26px;
   padding-top: 100px;
-  font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
+  font-family: "Ownglyph_corncorn-Rg", sans-serif;
 }
 
 .location {
@@ -25,7 +25,7 @@
   border-radius: 10px;
   border: 1px solid black;
   margin: 0 auto;
-  font-family: "GangwonEduSaeeum_OTFMediumA", "NanumDdaAgDanDan", sans-serif;
+  font-family: "GangwonEduSaeeum_OTFMediumA", sans-serif;
 }
 
 .customoverlay {
@@ -44,7 +44,7 @@
 .heart {
   text-align: center;
   font-size: 26px;
-  font-family: "Ownglyph_corncorn-Rg", "NanumDdaAgDanDan", sans-serif;
+  font-family: "Ownglyph_corncorn-Rg", sans-serif;
 }
 
 .heart_list {

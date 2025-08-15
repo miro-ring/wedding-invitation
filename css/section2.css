@@ -16,16 +16,6 @@
   background-position: center;
 }
 
-.section2-bg {
-  /* position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px; */
-  /* background: url("../imgs/paper.jpg") center no-repeat; */
-  /* background-size: cover; */
-}
-
 .intro_texts {
   width: 100%;
   height: 80vh;
@@ -33,7 +23,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "omyu_pretty";
 }
 
 .intro_text {
