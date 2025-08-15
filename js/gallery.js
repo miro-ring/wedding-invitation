@@ -1,6 +1,6 @@
 new Swiper(".gallery-thumbs", {
   loop: true,
-  loopedSlides: 10,
+  loopedSlides: 18,
   slidesPerView: 3,
   centeredSlides: true,
   slideToClickedSlide: true,
