@@ -35,6 +35,7 @@
 }
 
 .animation-container {
+  display: none;
   opacity: 0;
   position: fixed;
   left: 50%;
@@ -42,7 +43,6 @@
   bottom: 0;
   width: 400px;
   height: 310px;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
