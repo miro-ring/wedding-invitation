@@ -1,47 +1,34 @@
 // man
-const dude = document.querySelector(".dude");
+const dude = document.querySelector(".new-man");
 const head = dude.querySelector(".head");
 const legs = Array.from(dude.querySelectorAll(".leg"));
-const arms = Array.from(dude.querySelectorAll(".arm"));
+const leftArm = dude.querySelector(".left-arm");
+const rightArm = dude.querySelector(".right-arm");
 const legBottoms = Array.from(dude.querySelectorAll(".leg-bottom"));
 const armBottoms = Array.from(dude.querySelectorAll(".arm-bottom"));
 
-// woman
-const dudeWoman = document.querySelector(".dude-woman");
-const headWoman = dudeWoman.querySelector(".head-woman");
-const hairWoman = dudeWoman.querySelector(".hair-woman");
-const legsWoman = Array.from(dudeWoman.querySelectorAll(".leg-woman"));
-const armsWoman = Array.from(dudeWoman.querySelectorAll(".arm-woman"));
-const legBottomsWoman = Array.from(
-  dudeWoman.querySelectorAll(".leg-bottom-woman")
-);
-const armBottomsWoman = Array.from(
-  dudeWoman.querySelectorAll(".arm-bottom-woman")
-);
-
-gsap.set(arms, {
-  svgOrigin: "180 58",
+gsap.set(leftArm, {
+  svgOrigin: "100 -20",
+});
+gsap.set(rightArm, {
+  svgOrigin: "100 2",
 });
 gsap.set(head, {
-  svgOrigin: "180 45",
+  svgOrigin: "140 -50",
 });
 gsap.set(armBottoms, {
-  svgOrigin: "178 118",
+  svgOrigin: "130 45",
 });
 gsap.set(legs, {
-  svgOrigin: "177 145",
+  svgOrigin: "100 106",
 });
 gsap.set(legBottoms, {
-  svgOrigin: "171 220",
+  svgOrigin: "133 184",
 });
 
-gsap.set(headWoman, {
-  svgOrigin: "180 45",
+gsap.set(".bride-head", {
+  svgOrigin: "100 10",
 });
-gsap.set(hairWoman, {
-  svgOrigin: "180 45",
-});
-
 gsap.set(".left-front-arm", {
   svgOrigin: "116 36",
 });
@@ -54,12 +41,10 @@ gsap.set(".left-front-hand", {
   svgOrigin: "118 38",
 });
 
-gsap.set(".bride-head", {
-  svgOrigin: "100 10",
-});
-
 const halfBodyTimeline = (leg, arm) => {
   const legBottom = leg.querySelector(".leg-bottom");
+  console.log(leg);
+  console.log(arm);
   const armBottom = arm.querySelector(".arm-bottom");
 
   return gsap
@@ -70,7 +55,7 @@ const halfBodyTimeline = (leg, arm) => {
     .fromTo(
       leg,
       {
-        rotation: -25,
+        rotation: -20,
       },
       {
         duration: 0.5,
@@ -83,7 +68,7 @@ const halfBodyTimeline = (leg, arm) => {
       leg,
       {
         duration: 0.25,
-        rotation: -25,
+        rotation: -20,
         ease: "sine.in",
       },
       ">"
@@ -101,7 +86,7 @@ const halfBodyTimeline = (leg, arm) => {
       legBottom,
       {
         duration: 0.25,
-        rotation: 80,
+        rotation: 50,
         ease: "sine.in",
       },
       ">"
@@ -145,8 +130,11 @@ const halfBodyTimeline = (leg, arm) => {
     );
 };
 
-const backCycle = halfBodyTimeline(legs[0], arms[1]);
-const frontCycle = halfBodyTimeline(legs[1], arms[0]);
+console.log(rightArm);
+console.log(leftArm);
+
+const backCycle = halfBodyTimeline(legs[0], rightArm);
+const frontCycle = halfBodyTimeline(legs[1], leftArm);
 
 const bodyTimeline = gsap
   .timeline({
@@ -156,7 +144,7 @@ const bodyTimeline = gsap
     dude,
     {
       duration: 0.25,
-      y: "-=4",
+      y: "-=1",
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
@@ -166,7 +154,7 @@ const bodyTimeline = gsap
   .fromTo(
     head,
     {
-      rotation: -10,
+      rotation: -3,
     },
     {
       duration: 0.25,
@@ -220,24 +208,16 @@ scrollTimeline
     },
     0
   )
-  .to(head, { duration: 0.5, rotation: -25 }, "end")
+  .to(head, { duration: 0.5, rotation: -15 }, "end")
   .to(dude, { duration: 0.5, y: "+=50", ease: "power2.inOut" }, "end")
   .to(legs[0], { duration: 0.5, rotation: -80, ease: "sine.inOut" }, "end")
   .to(legBottoms[0], { duration: 0.5, rotation: 85, ease: "sine.inOut" }, "end")
   .to(legs[1], { duration: 0.5, rotation: 20, ease: "sine.inOut" }, "end")
   .to(legBottoms[1], { duration: 0.5, rotation: 50, ease: "sine.inOut" }, "end")
-  .to(arms[0], { duration: 0.5, rotation: -60 }, "end")
+  .to(leftArm, { duration: 0.5, rotation: -60 }, "end")
   .to(armBottoms[0], { duration: 0.5, rotation: -40 }, "end")
-  .to(arms[1], { duration: 0.5, rotation: -55 }, "end")
+  .to(rightArm, { duration: 0.5, rotation: -55 }, "end")
   .to(armBottoms[1], { duration: 0.5, rotation: -30 }, "end")
-  // woman
-  .to(headWoman, { duration: 0.2, rotation: 10 }, "-=0.2")
-  .to(hairWoman, { duration: 0.2, rotation: 10 }, "-=0.2")
-  .to(armsWoman[0], { duration: 0.2, rotation: -20 }, "-=0.2")
-  .to(armBottomsWoman[0], { duration: 0.2, rotation: -130 }, "-=0.2")
-  .to(armsWoman[1], { duration: 0.2, rotation: -40 }, "-=0.2")
-  .to(armBottomsWoman[1], { duration: 0.2, rotation: -120 }, "-=0.2")
-
   .to(".left-bottom-arm", { duration: 0.2, rotation: 35 }, "-=0.2")
   .to(".left-front-arm", { duration: 0.2, rotation: 55 }, "-=0.2")
   .to(".left-front-hand", { duration: 0.2, rotation: 55 }, "-=0.2")
