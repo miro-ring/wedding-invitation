@@ -49,9 +49,10 @@
 }
 
 .family_name_sub {
+  width: 60px;
+  text-align: center;
   display: inline-block;
   vertical-align: middle;
-  padding: 0 18px;
   font-size: 10px;
 }
 
