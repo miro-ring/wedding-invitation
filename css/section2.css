@@ -36,10 +36,14 @@
 
 .animation-container {
   display: flex;
-  opacity: 0;
+  opacity: 1;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-45%);
+  width: 400px; /* 고정 너비 */
+  justify-content: space-between; /* 또는 center */
+  align-items: flex-end;
 }
 
 .confetti-canvas {
@@ -54,6 +58,12 @@
 }
 
 .svg-wrapper {
-  width: 50%;
+  width: 50%; /* 또는 원하는 고정 크기 */
   height: 100%;
+}
+
+.tami {
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
 }

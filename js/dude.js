@@ -17,7 +17,7 @@ gsap.set(head, {
   svgOrigin: "140 -50",
 });
 gsap.set(armBottoms, {
-  svgOrigin: "130 45",
+  svgOrigin: "110 45",
 });
 gsap.set(legs, {
   svgOrigin: "100 106",
@@ -43,8 +43,6 @@ gsap.set(".left-front-hand", {
 
 const halfBodyTimeline = (leg, arm) => {
   const legBottom = leg.querySelector(".leg-bottom");
-  console.log(leg);
-  console.log(arm);
   const armBottom = arm.querySelector(".arm-bottom");
 
   return gsap
@@ -130,9 +128,6 @@ const halfBodyTimeline = (leg, arm) => {
     );
 };
 
-console.log(rightArm);
-console.log(leftArm);
-
 const backCycle = halfBodyTimeline(legs[0], rightArm);
 const frontCycle = halfBodyTimeline(legs[1], leftArm);
 
@@ -209,9 +204,9 @@ scrollTimeline
     0
   )
   .to(head, { duration: 0.5, rotation: -15 }, "end")
-  .to(dude, { duration: 0.5, y: "+=50", ease: "power2.inOut" }, "end")
-  .to(legs[0], { duration: 0.5, rotation: -80, ease: "sine.inOut" }, "end")
-  .to(legBottoms[0], { duration: 0.5, rotation: 85, ease: "sine.inOut" }, "end")
+  .to(dude, { duration: 0.5, y: "+=30", ease: "power2.inOut" }, "end")
+  .to(legs[0], { duration: 0.5, rotation: -70, ease: "sine.inOut" }, "end")
+  .to(legBottoms[0], { duration: 0.5, rotation: 70, ease: "sine.inOut" }, "end")
   .to(legs[1], { duration: 0.5, rotation: 20, ease: "sine.inOut" }, "end")
   .to(legBottoms[1], { duration: 0.5, rotation: 50, ease: "sine.inOut" }, "end")
   .to(leftArm, { duration: 0.5, rotation: -60 }, "end")
