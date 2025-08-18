@@ -213,6 +213,7 @@ scrollTimeline
   .to(armBottoms[0], { duration: 0.5, rotation: -40 }, "end")
   .to(rightArm, { duration: 0.5, rotation: -55 }, "end")
   .to(armBottoms[1], { duration: 0.5, rotation: -30 }, "end")
+  .to(".bouquet", { duration: 0.5, opacity: 1 }, "+=0.1")
   .to(".left-bottom-arm", { duration: 0.2, rotation: 35 }, "-=0.2")
   .to(".left-front-arm", { duration: 0.2, rotation: 55 }, "-=0.2")
   .to(".left-front-hand", { duration: 0.2, rotation: 55 }, "-=0.2")

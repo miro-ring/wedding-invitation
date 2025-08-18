@@ -68,3 +68,10 @@
   left: 50%;
   transform: translateX(-75%);
 }
+
+.bouquet {
+  opacity: 0;
+  position: absolute;
+  bottom: 147px;
+  left: 138px;
+}
