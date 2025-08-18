@@ -64,6 +64,7 @@
 
 .tami {
   position: absolute;
-  bottom: 100px;
-  right: 40px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-75%);
 }
