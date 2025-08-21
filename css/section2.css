@@ -42,6 +42,7 @@
   left: 50%;
   transform: translateX(-43%);
   width: 100%;
+  max-width: 400px;
   justify-content: space-between; /* 또는 center */
   align-items: flex-end;
 }

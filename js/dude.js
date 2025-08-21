@@ -213,18 +213,29 @@ scrollTimeline
   .to(armBottoms[0], { duration: 0.5, rotation: -40 }, "end")
   .to(rightArm, { duration: 0.5, rotation: -55 }, "end")
   .to(armBottoms[1], { duration: 0.5, rotation: -30 }, "end")
-  .to(".bouquet", { duration: 0.5, opacity: 1 }, "+=0.1")
-  .to(".left-bottom-arm", { duration: 0.2, rotation: 35 }, "-=0.2")
-  .to(".left-front-arm", { duration: 0.2, rotation: 55 }, "-=0.2")
-  .to(".left-front-hand", { duration: 0.2, rotation: 55 }, "-=0.2")
-  .to(".bride-head", { duration: 0.2, rotation: -15 }, "-=0.2");
+  .to(".bouquet", { duration: 0.5, opacity: 1 }, "+=0.1");
+
+const brideTimeline = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".section2",
+    start: "45% center", // section2의 80% 지점에서 시작
+    end: "bottom center",
+    scrub: true,
+  },
+});
+
+brideTimeline
+  .to(".left-bottom-arm", { duration: 0.2, rotation: 35 }, 0)
+  .to(".left-front-arm", { duration: 0.2, rotation: 55 }, 0)
+  .to(".left-front-hand", { duration: 0.2, rotation: 55 }, 0)
+  .to(".bride-head", { duration: 0.2, rotation: -15 }, 0);
 
 const scrollTimeline2 = gsap.timeline({
   scrollTrigger: {
     trigger: ".section2",
     scrub: true,
     start: "top center", // section1의 상단이 화면 중앙에 왔을 때
-    end: "bottom center", // section1의 하단이 화면 중앙에 왔을 때
+    end: "bottom top", // section1의 하단이 화면 중앙에 왔을 때
     onEnter: () => {
       gsap.to(".animation-container", {
         opacity: 1,

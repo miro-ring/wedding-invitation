@@ -12,4 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
       contactButton.textContent = "연락하기";
     }
   });
+
+  contactDropdown.addEventListener("transitionend", function () {
+    if (window.ScrollTrigger) {
+      ScrollTrigger.refresh();
+    }
+  });
 });
