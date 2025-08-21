@@ -26,6 +26,7 @@
   border: 1px solid black;
   margin: 0 auto;
   font-family: "GangwonEduSaeeum_OTFMediumA", sans-serif;
+  pointer-events: none;
 }
 
 .customoverlay {

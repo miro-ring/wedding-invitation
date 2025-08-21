@@ -236,32 +236,38 @@ const scrollTimeline2 = gsap.timeline({
     scrub: true,
     start: "top center", // section1의 상단이 화면 중앙에 왔을 때
     end: "bottom top", // section1의 하단이 화면 중앙에 왔을 때
+    fastScrollEnd: true, // 빠른 스크롤 최적화
+    invalidateOnRefresh: true, // 새로고침 시 상태 초기화
     onEnter: () => {
       gsap.to(".animation-container", {
         opacity: 1,
-        duration: 1,
+        duration: 0.3, // duration 단축
         ease: "power2.out",
+        overwrite: "auto", // 기존 애니메이션 덮어쓰기
       });
     },
     onLeave: () => {
       gsap.to(".animation-container", {
         opacity: 0,
-        duration: 1,
+        duration: 0.2, // duration 더 짧게
         ease: "power2.out",
+        overwrite: "auto",
       });
     },
     onEnterBack: () => {
       gsap.to(".animation-container", {
         opacity: 1,
-        duration: 1,
+        duration: 0.3,
         ease: "power2.out",
+        overwrite: "auto",
       });
     },
     onLeaveBack: () => {
       gsap.to(".animation-container", {
         opacity: 0,
-        duration: 1,
+        duration: 0.2,
         ease: "power2.out",
+        overwrite: "auto",
       });
     },
   },
