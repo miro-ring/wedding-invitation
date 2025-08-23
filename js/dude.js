@@ -17,7 +17,7 @@ gsap.set(head, {
   svgOrigin: "140 -50",
 });
 gsap.set(armBottoms, {
-  svgOrigin: "110 45",
+  svgOrigin: "100 40",
 });
 gsap.set(legs, {
   svgOrigin: "100 106",
@@ -207,6 +207,8 @@ scrollTimeline
   .to(dude, { duration: 0.5, y: "+=30", ease: "power2.inOut" }, "end")
   .to(legs[0], { duration: 0.5, rotation: -70, ease: "sine.inOut" }, "end")
   .to(legBottoms[0], { duration: 0.5, rotation: 70, ease: "sine.inOut" }, "end")
+  .to(".left_leg_circle", { duration: 0.5, x: -16, ease: "sine.inOut" }, "end")
+  .to(".left_leg_circle", { duration: 0.5, y: 46, ease: "sine.inOut" }, "end")
   .to(legs[1], { duration: 0.5, rotation: 20, ease: "sine.inOut" }, "end")
   .to(legBottoms[1], { duration: 0.5, rotation: 50, ease: "sine.inOut" }, "end")
   .to(leftArm, { duration: 0.5, rotation: -60 }, "end")
