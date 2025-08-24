@@ -1,7 +1,7 @@
 // ScrollTrigger 전역 설정
 ScrollTrigger.config({
-  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize", // resize 추가
-  // ignoreMobileResize: true, // 제거 - 모든 리사이즈 이벤트 허용
+  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load", // resize 추가
+  ignoreMobileResize: true, // 제거 - 모든 리사이즈 이벤트 허용
 });
 
 gsap.from(".come", {
@@ -11,7 +11,6 @@ gsap.from(".come", {
     toggleActions: "play reverse play reverse",
     refreshPriority: -1, // 낮은 우선순위
     fastScrollEnd: true, // 빠른 스크롤 최적화
-    markers: true,
   },
   opacity: 0,
   y: 50,

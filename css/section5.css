@@ -271,5 +271,6 @@
   font-size: 16px;
   color: #444;
   word-break: keep-all;
-  padding: 80px 0 0 50px;
+  margin-top: 100px;
+  padding-bottom: 50px;
 }
