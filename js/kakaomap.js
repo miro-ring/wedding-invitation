@@ -7,9 +7,9 @@ const BASE_URL =
 const MAP_CONFIG = {
   center: new kakao.maps.LatLng(37.5408, 127.0712),
   level: 3,
-  draggable: false,
-  scrollwheel: false, // 마우스 휠로 확대/축소 비활성화
-  disableDoubleClick: true, // 더블클릭 확대 비활성화
+  draggable: false, // 지도 드래그 비활성화
+  scrollwheel: false, // 마우스 휠 줌 비활성화 (스크롤은 페이지로 전달)
+  disableDoubleClick: true, // 더블클릭 비활성화
   disableDoubleClickZoom: true, // 더블클릭 줌 비활성화
 };
 
