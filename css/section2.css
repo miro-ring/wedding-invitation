@@ -3,19 +3,6 @@
   position: relative;
 }
 
-.section2::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: var(--fixed-width, 375px);
-  height: var(--fixed-height, 812px);
-  background: url("../imgs/paper.jpg");
-  background-size: var(--fixed-width, 375px) var(--fixed-height, 812px);
-  background-repeat: repeat;
-  background-position: center;
-}
-
 .intro_texts {
   width: 100%;
   height: 80vh;

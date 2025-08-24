@@ -213,8 +213,10 @@ scrollTimeline
   .to(legBottoms[1], { duration: 0.5, rotation: 50, ease: "sine.inOut" }, "end")
   .to(leftArm, { duration: 0.5, rotation: -60 }, "end")
   .to(armBottoms[0], { duration: 0.5, rotation: -40 }, "end")
+  .to(".left_arm_circle", { duration: 0.5, x: 9, ease: "sine.inOut" }, "end")
   .to(rightArm, { duration: 0.5, rotation: -55 }, "end")
   .to(armBottoms[1], { duration: 0.5, rotation: -30 }, "end")
+  .to(".right_arm_circle", { duration: 0.5, x: 20, ease: "sine.inOut" }, "end")
   .to(".bouquet", { duration: 0.5, opacity: 1 }, "+=0.1");
 
 const brideTimeline = gsap.timeline({
@@ -274,7 +276,3 @@ const scrollTimeline2 = gsap.timeline({
     },
   },
 });
-
-// window.addEventListener("resize", () => {
-//   ScrollTrigger.refresh();
-// });
