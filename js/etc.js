@@ -7,10 +7,11 @@ ScrollTrigger.config({
 gsap.from(".come", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 320px", // 더 일찍 시작하도록 증가
+    start: "top 60%", // 뷰포트의 80% 지점에서 시작
     toggleActions: "play reverse play reverse",
     refreshPriority: -1, // 낮은 우선순위
     fastScrollEnd: true, // 빠른 스크롤 최적화
+    markers: true,
   },
   opacity: 0,
   y: 50,
@@ -20,7 +21,7 @@ gsap.from(".come", {
 gsap.from(".location", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 300px", // 350px → 300px로 조정
+    start: "top 55%", // 일관된 퍼센트 값
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
@@ -33,7 +34,7 @@ gsap.from(".location", {
 gsap.from("#map", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 280px", // 150px → 250px로 조정
+    start: "top 40%", // 일관된 퍼센트 값
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
@@ -46,7 +47,7 @@ gsap.from("#map", {
 gsap.from(".map_links_wrapper", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 250px", // 140px → 200px로 조정
+    start: "top 30%", // 일관된 퍼센트 값
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
@@ -56,20 +57,106 @@ gsap.from(".map_links_wrapper", {
   duration: 1,
 });
 
-// 하단 요소들을 하나의 타임라인으로 묶어서 최적화
-const bottomElementsTimeline = gsap.timeline({
+gsap.from(".parking_tip_container", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top -175px", // 중간값으로 조정
+    start: "top 20%", // 일관된 퍼센트 값
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
   },
+  opacity: 0,
+  y: 50,
+  duration: 1,
 });
 
-bottomElementsTimeline
-  .from(".tip_container", { opacity: 0, y: 50, duration: 1 }, 0)
-  .from(".tip_text_container", { opacity: 0, y: 50, duration: 1 }, 0.1)
-  .from(".line", { opacity: 0, y: 50, duration: 1 }, 0.2)
-  .from(".heart", { opacity: 0, y: 50, duration: 1 }, 0.3)
-  .from(".heart_list", { opacity: 0, y: 50, duration: 1 }, 0.4);
+gsap.from(".parking_tip_text_container", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top 10%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".come_tip_container", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top 0%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".come_tip_text_container", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -10%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".line", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -25%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".heart", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -40%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".heart_list", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -50%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
+
+gsap.from(".blessing_text", {
+  scrollTrigger: {
+    trigger: ".section5",
+    start: "top -50%", // 일관된 퍼센트 값
+    toggleActions: "play reverse play reverse",
+    refreshPriority: -1,
+    fastScrollEnd: true,
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+});
