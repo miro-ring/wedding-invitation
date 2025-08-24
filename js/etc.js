@@ -1,7 +1,7 @@
 // ScrollTrigger 전역 설정
 ScrollTrigger.config({
-  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load", // resize 제거
-  ignoreMobileResize: true, // 모바일 리사이즈 무시
+  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize", // resize 추가
+  // ignoreMobileResize: true, // 제거 - 모든 리사이즈 이벤트 허용
 });
 
 gsap.from(".come", {
