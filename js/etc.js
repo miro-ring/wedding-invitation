@@ -7,7 +7,7 @@ ScrollTrigger.config({
 gsap.from(".come", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 200px",
+    start: "top 350px", // 더 일찍 시작하도록 증가
     toggleActions: "play reverse play reverse",
     refreshPriority: -1, // 낮은 우선순위
     fastScrollEnd: true, // 빠른 스크롤 최적화
@@ -20,7 +20,7 @@ gsap.from(".come", {
 gsap.from(".location", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 190px",
+    start: "top 300px", // 350px → 300px로 조정
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
@@ -33,7 +33,7 @@ gsap.from(".location", {
 gsap.from("#map", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 150px",
+    start: "top 250px", // 150px → 250px로 조정
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
@@ -46,7 +46,7 @@ gsap.from("#map", {
 gsap.from(".map_links_wrapper", {
   scrollTrigger: {
     trigger: ".section5",
-    start: "top 140px",
+    start: "top 200px", // 140px → 200px로 조정
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
@@ -60,7 +60,7 @@ gsap.from(".map_links_wrapper", {
 const bottomElementsTimeline = gsap.timeline({
   scrollTrigger: {
     trigger: ".section5",
-    start: "top -200px",
+    start: "top -150px",
     toggleActions: "play reverse play reverse",
     refreshPriority: -1,
     fastScrollEnd: true,
