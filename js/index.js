@@ -2,7 +2,6 @@ import "./introText.js";
 import "./dude.js";
 import "./particles.js";
 import "./gallery.js";
-import "./etc.js";
 import "./kakaomap.js";
 import "./preventCapture.js";
 import "./skyHeight.js";
