@@ -239,7 +239,7 @@ const scrollTimeline2 = gsap.timeline({
     trigger: ".section2",
     scrub: true,
     start: "top center", // section1의 상단이 화면 중앙에 왔을 때
-    end: "bottom top", // section1의 하단이 화면 중앙에 왔을 때
+    end: "bottom center", // section1의 하단이 화면 중앙에 왔을 때
     fastScrollEnd: true, // 빠른 스크롤 최적화
     invalidateOnRefresh: true, // 새로고침 시 상태 초기화
     onEnter: () => {

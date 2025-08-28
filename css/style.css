@@ -57,6 +57,13 @@ main {
   font-family: "omyu_pretty";
 }
 
+/* 화면 너비가 400px보다 클 때 양옆에 그림자 추가 */
+@media (min-width: 401px) {
+  main {
+    box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1), 10px 0 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
 * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
