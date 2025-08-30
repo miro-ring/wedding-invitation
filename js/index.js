@@ -9,18 +9,19 @@ import "./heartList.js";
 import "./copyText.js";
 import "./callText.js";
 
-// 쿼리 파라미터 체크 - type=2인 경우 section2 숨기기 및 확대 허용
+// 쿼리 파라미터 체크 - type=2인 경우 section2 제거하고 section2-2 표시, 확대 허용
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const type = urlParams.get("type");
 
   if (type === "2") {
-    // section2 숨기기
+    // section2 제거
     const section2 = document.querySelector(".section2");
-    if (section2) {
-      section2.style.display = "none";
-      console.log("section2 hidden due to type=2 parameter");
-    }
+    if (section2) section2.remove();
+
+    // section2-2 표시 (display:none 제거)
+    const section2_2 = document.querySelector(".section2-2");
+    if (section2_2) section2_2.style.display = "block";
 
     // 확대 허용 (user-scalable=yes로 변경)
     const viewportMeta = document.querySelector('meta[name="viewport"]');
