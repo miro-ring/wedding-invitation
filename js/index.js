@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const section2_2 = document.querySelector(".section2-2");
     if (section2_2) section2_2.style.display = "block";
 
+    const type1 = document.querySelector(".tip_text.type1");
+    if (type1) type1.style.display = "none";
+    const type2 = document.querySelector(".tip_text.type2");
+    if (type2) type2.style.display = "block";
+
     // 확대 허용 (user-scalable=yes로 변경)
     const viewportMeta = document.querySelector('meta[name="viewport"]');
     if (viewportMeta) {
